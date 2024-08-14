@@ -6,16 +6,16 @@
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/14 12:41:42 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/14 13:57:17 by tsurma           ###   ########.fr        #
+#    Updated: 2024/08/14 14:47:27 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
-NAME = ClapTrap.out
+NAME = ScavTrap.out
 MAKEFLAGS = --no-print-directory
 
-SRC = main.cpp ClapTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

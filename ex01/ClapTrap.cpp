@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 12:05:35 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 13:55:42 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/14 15:08:41 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,14 @@ void ClapTrap::takeDamage(unsigned int amount) {
 		std::cout << _name << ": Is already trashed." << std::endl;
 		return;
 	}
+	std::cout << _name << ": Took " << amount << " of Damage";
+	if (amount > 2147483647 / 2)
+		amount = _HitPoints + 1;
 	if ((_HitPoints -= amount) <= 0) {
 		_HitPoints = 0;
-		std::cout << _name << ": Took " << amount << " of Damage and was destroyed" << std::endl;
-		return;
+		std::cout << " and was destroyed";
 	}
-	std::cout << _name << ": Took " << amount << " of Damage" << std::endl;
+	std::cout << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
@@ -68,6 +70,12 @@ void ClapTrap::beRepaired(unsigned int amount) {
 		return;
 	}
 	--_EnergyPoints;
+	if (amount > 2147483647)
+		amount = 2147483647 - _HitPoints - 1;
 	_HitPoints += amount;
 	std::cout << _name << ": Has repaired " << amount << " _HitPoints" << std::endl;
+}
+
+void ClapTrap::status() {
+	std::cout << "Name = " << _name << "\nHP = " << _HitPoints << "\nEP = " << _EnergyPoints << "\nAD = " << _AttackDamage << std::endl;
 }

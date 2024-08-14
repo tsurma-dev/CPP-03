@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 12:04:21 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 13:55:54 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/14 15:06:28 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string	_name;
 	int			_HitPoints;
 	int			_EnergyPoints;
@@ -30,6 +30,7 @@ public:
 	void attack(const std::string& target);
 	void takeDamage( unsigned int amount );
 	void beRepaired( unsigned int amount );
+	void status();
 };
 
 
