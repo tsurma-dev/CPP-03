@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 12:05:35 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 13:55:42 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/14 15:38:03 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,5 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	}
 	--_EnergyPoints;
 	_HitPoints += amount;
-	std::cout << _name << ": Has repaired " << amount << " _HitPoints" << std::endl;
+	std::cout << _name << ": Has repaired " << amount << " HitPoints" << std::endl;
 }

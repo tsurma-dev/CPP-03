@@ -6,13 +6,14 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 12:54:52 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 18:21:21 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/14 19:10:21 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "../includes/FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name) {
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name)  {
 	this->_HitPoints = 100;
 	this->_EnergyPoints = 100;
 	this->_AttackDamage = 30;
@@ -47,7 +48,7 @@ void FragTrap::attack(const std::string& target) {
 		return;
 	}
 	--_EnergyPoints;
-	std::cout << _name << ": Frags " << target << ", causing " << _AttackDamage << " points of damage!" << std::endl;
+	std::cout << "FragTrap " << _name << ": Frags " << target << ", causing " << _AttackDamage << " points of damage!" << std::endl;
 }
 
 void FragTrap::highFivesGuys() {

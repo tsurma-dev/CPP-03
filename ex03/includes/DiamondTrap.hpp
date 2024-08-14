@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 12:34:02 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 17:52:04 by tsurma           ###   ########.fr       */
+/*   Created: 2024/08/14 15:24:33 by tsurma            #+#    #+#             */
+/*   Updated: 2024/08/14 19:31:24 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DIAMONDTRAP_HPP_
+#define DIAMONDTRAP_HPP_
+
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main(void) {
-	ClapTrap * clappy = new FragTrap("fraggy");
-	(*clappy).attack("gd");
-	// FragTrap a( "Frag" );
-	// a.status();
-	// a.attack( "Dummy" );
-	// a.beRepaired(5);
-	// a.takeDamage(5);
-	// a.highFivesGuys();
-}
+class DiamondTrap: public ScavTrap, public FragTrap {
+	private:
+		std::string _name;
+	public:
+		DiamondTrap(std::string name);
+		~DiamondTrap();
+		void attack(const std::string& target);
+		void status(void);
+};
+
+#endif

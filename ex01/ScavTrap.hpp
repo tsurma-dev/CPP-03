@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 12:54:45 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 14:53:43 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/14 17:53:23 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap: public ClapTrap {
+class ScavTrap: virtual public ClapTrap {
 	private:
-
 
 	public:
 		ScavTrap(std::string name);

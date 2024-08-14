@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 12:34:02 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 17:52:04 by tsurma           ###   ########.fr       */
+/*   Created: 2024/08/14 12:54:45 by tsurma            #+#    #+#             */
+/*   Updated: 2024/08/14 19:31:38 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef SCAVTRAP_HPP_
+#define SCAVTRAP_HPP_
 
-int main(void) {
-	ClapTrap * clappy = new FragTrap("fraggy");
-	(*clappy).attack("gd");
-	// FragTrap a( "Frag" );
-	// a.status();
-	// a.attack( "Dummy" );
-	// a.beRepaired(5);
-	// a.takeDamage(5);
-	// a.highFivesGuys();
-}
+#include "ClapTrap.hpp"
+
+class ScavTrap: virtual public ClapTrap {
+	protected:
+		int _HitPoints;
+		int _EnergyPoints;
+		int _AttackDamage;
+	public:
+		ScavTrap(std::string name);
+		~ScavTrap();
+		ScavTrap( const ScavTrap& other);
+		ScavTrap& operator=( const ScavTrap& other );
+		virtual void attack(const std::string& target);
+		void guardGate();
+
+};
+
+#endif

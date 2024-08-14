@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 12:34:02 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 17:52:04 by tsurma           ###   ########.fr       */
+/*   Created: 2024/08/14 12:54:45 by tsurma            #+#    #+#             */
+/*   Updated: 2024/08/14 19:31:34 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#ifndef FRAGTRAP_HPP_
+#define FRAGTRAP_HPP_
 
-int main(void) {
-	ClapTrap * clappy = new FragTrap("fraggy");
-	(*clappy).attack("gd");
-	// FragTrap a( "Frag" );
-	// a.status();
-	// a.attack( "Dummy" );
-	// a.beRepaired(5);
-	// a.takeDamage(5);
-	// a.highFivesGuys();
-}
+#include "ClapTrap.hpp"
+
+class FragTrap: virtual public ClapTrap {
+	private:
+	public:
+		FragTrap(std::string name);
+		~FragTrap();
+		FragTrap( const FragTrap& other);
+		FragTrap& operator=( const FragTrap& other );
+		virtual void attack(const std::string& target);
+		void highFivesGuys();
+
+};
+
+#endif

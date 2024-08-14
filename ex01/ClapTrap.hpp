@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 12:04:21 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/14 15:06:28 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/14 17:53:07 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	~ClapTrap();
 	ClapTrap( const ClapTrap& );
 	ClapTrap& operator=( const ClapTrap& other );
-	void attack(const std::string& target);
+	virtual void attack(const std::string& target);
 	void takeDamage( unsigned int amount );
 	void beRepaired( unsigned int amount );
 	void status();

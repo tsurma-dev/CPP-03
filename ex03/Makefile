@@ -6,16 +6,20 @@
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/14 12:41:42 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/14 17:48:05 by tsurma           ###   ########.fr        #
+#    Updated: 2024/08/14 16:43:05 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -g3 -std=c++98 -Wshadow -fno-elide-constructors
-NAME = FragTrap.out
+CXXFLAGS = -Wall -Werror -Wextra -g3 -std=c++98 -Wshadow
+NAME = DiamondTrap.out
 MAKEFLAGS = --no-print-directory
 
-SRC = main.cpp ClapTrap.cpp FragTrap.cpp
+SRC =	src/main.cpp\
+		src/ClapTrap.cpp\
+		src/FragTrap.cpp\
+		src/ScavTrap.cpp\
+		src/DiamondTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
