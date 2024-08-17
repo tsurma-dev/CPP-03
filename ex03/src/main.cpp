@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "../includes/ClapTrap.hpp"
+#include "../includes/DiamondTrap.hpp"
 #include "../includes/FragTrap.hpp"
 #include "../includes/ScavTrap.hpp"
-#include "../includes/DiamondTrap.hpp"
 
 int main(void) {
-	DiamondTrap a("Diamond");
-	a.ClapTrap::status();
-	a.status();
-	a.attack("Dummy");
+  DiamondTrap a("Diamond");
+  a.ClapTrap::status();
+  a.status();
+  a.attack("Dummy");
+  a.whoAmI();
 }

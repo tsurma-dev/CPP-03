@@ -15,19 +15,19 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap: virtual public ClapTrap {
-	protected:
-		int _HitPoints;
-		int _EnergyPoints;
-		int _AttackDamage;
-	public:
-		ScavTrap(std::string name);
-		~ScavTrap();
-		ScavTrap( const ScavTrap& other);
-		ScavTrap& operator=( const ScavTrap& other );
-		virtual void attack(const std::string& target);
-		void guardGate();
+class ScavTrap : virtual public ClapTrap {
+protected:
+  int _HitPoints;
+  int _EnergyPoints;
+  int _AttackDamage;
 
+public:
+  ScavTrap(std::string name);
+  ~ScavTrap();
+  ScavTrap(const ScavTrap &other);
+  ScavTrap &operator=(const ScavTrap &other);
+  virtual void attack(const std::string &target);
+  void guardGate();
 };
 
 #endif

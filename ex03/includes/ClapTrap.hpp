@@ -15,25 +15,22 @@
 
 #include <iostream>
 
-class ClapTrap
-{
+class ClapTrap {
 protected:
-	std::string	_name;
-	int			_HitPoints;
-	int			_EnergyPoints;
-	int			_AttackDamage;
+  std::string _name;
+  int _HitPoints;
+  int _EnergyPoints;
+  int _AttackDamage;
+
 public:
-	ClapTrap( std::string name);
-	virtual ~ClapTrap();
-	ClapTrap( const ClapTrap& copy);
-	ClapTrap& operator=( const ClapTrap& other );
-	virtual void attack(const std::string& target);
-	void takeDamage( unsigned int amount );
-	void beRepaired( unsigned int amount );
-	void status();
+  ClapTrap(std::string name);
+  virtual ~ClapTrap();
+  ClapTrap(const ClapTrap &copy);
+  ClapTrap &operator=(const ClapTrap &other);
+  virtual void attack(const std::string &target);
+  void takeDamage(unsigned int amount);
+  void beRepaired(unsigned int amount);
+  void status();
 };
-
-
-
 
 #endif
